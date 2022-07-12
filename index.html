@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PingPong tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div id="title">
+        <h1><span id="pColor1">P</span>ING <span id="pColor2">P</span>ONG</h1>
+    </div>
+
+    <div id="startPage" class="in">
+        <div id="info">
+            <p id="startText">¿Quién inicia el saque?</p>
+        </div>
+        <div id="players">
+            <div id="player1start" class="player player1">
+                <p>Player 1</p>
+            </div>
+            <div id="player2start" class="player player2">
+                <p>Player 2</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="matchPage">
+        <div id="info">
+            <div id="scores">
+                <div id="score1" class="score player1">
+                    <p id="player1Score">0</p>
+                </div>
+                <p id="vs">VS</p>
+                <div id="score2" class="score player2">
+                    <p id="player2Score">0</p>
+                </div>
+            </div>
+        </div>
+        <div id="players">
+            <div id="player1" class="player player1">
+                <p>Player 1</p>
+            </div>
+            <div id="player2" class="player player2">
+                <p>Player 2</p>
+            </div>
+        </div>
+        <div id="rounds">
+            <p id="currentRound">Round: </p>
+        </div>
+    </div>
+
+    <div id="winPage">
+        <div id="info">
+            <p id="ganadorTxt"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Victor Guillén</p>
+    </footer>
+
+    <script src="./code.js"></script>
+</body>
+
+</html>

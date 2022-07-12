@@ -1,0 +1,228 @@
+@font-face {
+    font-family: "DotsAllForNow";
+    src: url(./fonts/DotsAllForNow.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+:root {
+    --globalRadius: 12px;
+    --marginGrid: 20px;
+    --player1: 49, 10, 252;
+    --player2: 242, 7, 47;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #181818;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title h1 {
+    margin-top: 30px;
+    color: white;
+    font-family: "DotsAllForNow", Arial, sans-serif;
+    font-size: 12vw;
+    font-weight: normal;
+
+}
+
+#pColor1 {
+    color: rgb(var(--player1));
+}
+
+#pColor2 {
+    color: rgb(var(--player2));
+}
+
+#startPage {
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#startText {
+    margin-top: 75px;
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+#matchPage {
+    animation-fill-mode: forwards;
+
+    visibility: hidden;
+}
+
+#info {
+    height: 200px;
+    width: calc(100vw - calc(var(--marginGrid) * 2));
+    margin-top: 30px;
+    background-color: white;
+    border-radius: var(--globalRadius);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#players {
+    height: 200px;
+    width: calc(100vw - 40px);
+    margin-top: var(--marginGrid);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player {
+    height: 100%;
+    width: calc((100% - var(--marginGrid)) / 2);
+    border-radius: var(--globalRadius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.075s ease-in-out;
+}
+
+.player p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.player:active {
+    transform: translateY(4px);
+}
+
+.player1 {
+    background-color: rgb(var(--player1));
+    box-shadow: 0px 3px 10px 0px rgba(var(--player1), 0.4);
+}
+
+.player2 {
+    background-color: rgb(var(--player2));
+    box-shadow: 0px 3px 10px 0px rgba(var(--player2), 0.4);
+}
+
+#scores {
+    height: 45%;
+    width: 80%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "DotsAllForNow", Arial, sans-serif;
+}
+
+.score {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--globalRadius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score p {
+    color: white;
+    font-size: 3em;
+}
+
+.score img {
+    width: 50px;
+    transform: translateY(75px);
+    position: absolute;
+}
+
+#vs {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.15);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.in {
+    animation: 0.6s fadeIn;
+}
+
+.out {
+    animation: 0.3s fadeOut;
+}
+
+#rounds {
+    color: rgba(255, 255, 255, 0.2);
+    font-family: "DotsAllForNow", Arial, sans-serif;
+    margin-top: 60px;
+    font-size: 2em;
+    text-align: center;
+}
+
+#winPage {
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#ganadorTxt {
+    margin-top: 75px;
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
